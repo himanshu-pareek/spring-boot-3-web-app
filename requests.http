@@ -1,0 +1,28 @@
+### Find all orders
+
+curl -X GET \
+http://localhost:8080/api/orders
+
+### Create new order [C]
+
+curl -X POST \
+-H "Content-Type: application/json" \
+-d '{"name": "Order 3", "placedTime": "2024-03-23T11:03:49.265604", "totalAmount": 500, "status": "CREATED"}' \
+http://localhost:8080/api/orders
+
+### Get order by id [R]
+
+curl -X GET \
+http://localhost:8080/api/orders/{orderId}
+
+### Update order [U]
+
+curl -X PUT \
+-H "Content-Type: application/json" \
+-d '{"name": "Third Order", "placedTime": "2024-04-01T11:03:49.265604", "totalAmount": 500, "status": "CREATED"}' \
+http://localhost:8080/api/orders/{orderId}
+
+### Delete order [D]
+
+curl -X DELETE \
+http://localhost:8080/api/orders/{orderId}

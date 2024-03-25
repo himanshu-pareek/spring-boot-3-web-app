@@ -1,13 +1,27 @@
 package dev.javarush.hackathon.ordermanagement.order;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import org.hibernate.validator.constraints.Length;
+
 import java.time.LocalDateTime;
 
 public class Order {
     private Integer id;
+
+    @NotNull
+    @NotBlank
+    @Length(
+            min = 5,
+            max = 20
+    )
     private String name;
     private LocalDateTime placedTime;
     private Integer totalAmount;
     private OrderStatus status;
+
+    public Order() {}
 
     public Order(Integer id, String name, LocalDateTime placedTime, Integer totalAmount, OrderStatus status) {
         this.id = id;
@@ -17,42 +31,42 @@ public class Order {
         this.status = status;
     }
 
-    Order(String name, LocalDateTime placedTime, Integer totalAmount, OrderStatus status) {
+    public Order(String name, LocalDateTime placedTime, Integer totalAmount, OrderStatus status) {
         this.name = name;
         this.placedTime = placedTime;
         this.totalAmount = totalAmount;
         this.status = status;
     }
 
-    Integer getId() {
+    public Integer getId() {
         return id;
     }
 
-    void setId(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    LocalDateTime getPlacedTime() {
+    public LocalDateTime getPlacedTime() {
         return placedTime;
     }
 
-    void setPlacedTime(LocalDateTime placedTime) {
+    public void setPlacedTime(LocalDateTime placedTime) {
         this.placedTime = placedTime;
     }
 
-    Integer getTotalAmount() {
+    public Integer getTotalAmount() {
         return totalAmount;
     }
 
-    void setTotalAmount(Integer totalAmount) {
+    public void setTotalAmount(Integer totalAmount) {
         this.totalAmount = totalAmount;
     }
 
