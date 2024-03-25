@@ -298,8 +298,51 @@ Custom Exception - `MyException`
 ## Module 4 - Connecting to database
 
 - H2 database (in memory db)
+- Initialize Schema
+- Options
+- Load data
+- Postgres Database
 
 ### H2 Database
 
-- In memory database
-- 
+- In memory embedded database
+- Enable h2-console at `/h2-console`
+	`spring.h2.console.enabled=true`
+- Configure database properties
+
+### Initialize Schema
+
+- `resources/schema.sql`
+
+### Options
+
+- `Connections`, `Statement`, `PreparedStatement`, ... 🤯
+- `JdbcTemplate`
+- `JdbcClient` 🥳
+
+### JdbcClient
+
+```java
+jdbcClient.sql("SQL here")
+	.params()
+	.update();
+```
+
+### Load data
+
+- Put code in `CommandLineRunner` bean
+- `data.sql`
+- Read `JSON` file
+
+### Postgres Database
+
+- In **container** using **docker**
+  
+	- [Read here](https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/)
+	- `docker-compose.yaml`
+    - `docker-compose up -d`
+- On host machine
+	
+	- [Download Postgres](https://www.postgresql.org/)
+    - Install it
+- `spring.sql.init.mode=always`

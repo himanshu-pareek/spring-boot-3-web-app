@@ -8,9 +8,9 @@ import java.util.function.Supplier;
 @Service
 public class OrderService {
 
-    private final OrderRepository orderRepository;
+    private final DBOrderRepository orderRepository;
 
-    public OrderService(OrderRepository orderRepository) {
+    public OrderService(DBOrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
 
