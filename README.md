@@ -6,7 +6,7 @@
 2. Module 2 - Creating a Project
 3. Module 3 - Creating REST APIs
 4. Module 4 - Connecting to Database
-5. Module 5 - REST Client
+5. Module 5 - Perform REST Requests
 6. Module 6 - Testing
 
 ---
@@ -346,3 +346,37 @@ jdbcClient.sql("SQL here")
 	- [Download Postgres](https://www.postgresql.org/)
     - Install it
 - `spring.sql.init.mode=always`
+
+---
+
+## Module 5 - Perform REST Requests
+
+- Choices available
+- RestClient
+- HTTP Interface
+
+### Choices available
+
+- [RestTemplate](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html)
+
+	- Synchronous client with template method API
+- [WebClient](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/reactive/function/client/WebClient.html)
+
+	- Asynchronous client with fluent API
+- [RestClient](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestClient.html)
+
+	- Synchronous client with fluent API
+- [HTTP Interface](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html#rest-http-interface)
+
+	- Annotated interface with generated, dynamic proxy implementation
+
+### RestClient
+
+- Create from `RestClinet.Builder`
+- Configuration
+
+### HTTP Interface
+
+- Create
+- Initialize
+- Use
