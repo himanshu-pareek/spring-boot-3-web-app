@@ -8,11 +8,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/orders")
-public class OrderController {
+public class OrderRestController {
 
     private final OrderService orderService;
 
-    public OrderController(OrderService orderService) {
+    public OrderRestController(OrderService orderService) {
         this.orderService = orderService;
     }
 

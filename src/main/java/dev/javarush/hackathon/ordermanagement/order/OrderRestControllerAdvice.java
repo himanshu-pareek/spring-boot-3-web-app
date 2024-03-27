@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.util.Arrays;
 
 @RestControllerAdvice
-public class OrderControllerAdvice {
+public class OrderRestControllerAdvice {
 
     @ExceptionHandler(OrderNotFoundException.class)
     public ResponseEntity<ProblemDetail> handleOrderNotFoundException(OrderNotFoundException exception) {

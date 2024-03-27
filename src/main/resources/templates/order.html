@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${order != null ? order.name : error}"></title>
+</head>
+<body>
+    <div th:if="${error != null}">
+        <p style="color: red;" th:text="${error}"></p>
+        <a th:href="@{/orders}">View all orders</a>
+    </div>
+    <div th:if="${order != null}">
+        <p>
+            <span>Id - </span><span th:text="${order.id}"></span>
+        </p>
+        <p>
+            <span>Name - </span><span th:text="${order.name}"></span>
+        </p>
+        <p>
+            <span>Total amount - </span><span th:text="${order.totalAmount}"></span>
+        </p>
+        <p>
+            <span>Status - </span><span th:text="${order.status}"></span>
+        </p>
+    </div>
+
+</body>
+</html>

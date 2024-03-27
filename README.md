@@ -7,7 +7,7 @@
 3. Module 3 - Creating REST APIs
 4. Module 4 - Connecting to Database
 5. Module 5 - Perform REST Requests
-6. Module 6 - Testing
+6. Module 6 - Build UI
 
 ---
 
@@ -380,3 +380,42 @@ jdbcClient.sql("SQL here")
 - Create
 - Initialize
 - Use
+
+---
+
+## Module 6 - Build UI
+
+- Options available
+- Thymeleaf
+- Spring + Angular
+
+### Options available
+
+- Standalone UI using
+
+	- HTML, CSS, Javascript
+    - Javascript Framework (Angular, React, Vue,...)
+    - Mobile Applications
+
+- Serve with Spring using Template Engine -
+
+	- **Thymeleaf**
+    - JSP
+    - Velocity
+    - FreeMarker
+
+### Thymeleaf
+
+[Read here](https://www.thymeleaf.org/doc/tutorials/3.1/thymeleafspring.html)
+
+- Dependency - `spring-boot-starter-thymeleaf`
+- view name - `abc`
+- file name - `abc.html`
+- auto completion - `<html lang="en" xmlns:th="http://www.thymeleaf.org">`
+
+### Spring + Angular
+
+- [Watch this video](https://youtu.be/LM9AfUJWnWk?si=Gli_CAk7G3vVtOQp)
+- [Full stack development with Spring](https://youtube.com/playlist?list=PLbk-lC-jmHejADrtAJJ1hHqMpdl2JPkKL&si=rGOfodBovXl_H6HU)
+
+---

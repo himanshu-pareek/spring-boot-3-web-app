@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<h1>All orders</h1>
+<div class="orders">
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Placed On</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="order: ${orders}">
+                <tr>
+                    <td th:text="${order.id}"></td>
+                    <td th:text="${order.name}"></td>
+                    <td th:text="${#temporals.format(order.placedTime,'MMM dd, yyyy @ HH:mm')}"></td>
+                    <td th:text="${order.totalAmount}"></td>
+                    <td th:text="${order.status}"></td>
+                    <td><a th:href="@{/orders/{id}(id=${order.id})}">View order items</a></td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
