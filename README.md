@@ -347,6 +347,19 @@ jdbcClient.sql("SQL here")
     - Install it
 - `spring.sql.init.mode=always`
 
+### MySQL Database
+
+- In **container** using **docker**
+
+	- [Read here](https://hub.docker.com/_/mysql)
+    - `docker-compose.yaml`
+    - `docker-compose up -d`
+- On host machine
+
+	- [Download MySQL](https://www.mysql.com/)
+    - Install it
+- `spring.sql.init.mode=always`
+
 ---
 
 ## Module 5 - Perform REST Requests

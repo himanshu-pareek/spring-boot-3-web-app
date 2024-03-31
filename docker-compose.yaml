@@ -1,9 +1,20 @@
+#services:
+#  database:
+#    image: 'postgres:11.21-bullseye'
+#    ports:
+#      - '5432:5432'
+#    environment:
+#      POSTGRES_USER: 'dev'
+#      POSTGRES_DB: 'eshop'
+#      POSTGRES_PASSWORD: 'pass'
+
 services:
   database:
-    image: 'postgres:11.21-bullseye'
+    image: 'mysql:latest'
     ports:
-      - '5432:5432'
+      - '3306:3306'
     environment:
-      POSTGRES_USER: 'dev'
-      POSTGRES_DB: 'eshop'
-      POSTGRES_PASSWORD: 'pass'
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'eshop'
+      MYSQL_USER: 'dev'
+      MYSQL_PASSWORD: 'pass'

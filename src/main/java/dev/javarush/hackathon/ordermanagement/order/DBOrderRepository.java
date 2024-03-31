@@ -39,7 +39,7 @@ public class DBOrderRepository {
                 ))
                 .update(keyHolder);
 
-        order.setId((Integer) keyHolder.getKeys().get("id"));
+        order.setId(Integer.parseInt(keyHolder.getKey().toString()));
         return order;
     }
 
