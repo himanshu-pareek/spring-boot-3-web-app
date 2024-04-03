@@ -8,6 +8,8 @@ import org.springframework.web.client.RestClient;
 import org.springframework.web.client.support.RestClientAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
+import java.lang.reflect.Type;
+
 @Service
 public class UserService {
 
@@ -36,5 +38,4 @@ public class UserService {
                 .retrieve()
                 .body(new ParameterizedTypeReference<>() {});
     }
-
 }

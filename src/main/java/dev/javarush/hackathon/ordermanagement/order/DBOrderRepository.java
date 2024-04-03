@@ -6,13 +6,14 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
+import javax.sql.DataSource;
 import java.util.*;
 
 @Repository
 public class DBOrderRepository {
     private final JdbcClient jdbcClient;
 
-    public DBOrderRepository(JdbcTemplate template, JdbcClient jdbcClient) {
+    public DBOrderRepository(JdbcClient jdbcClient) {
         this.jdbcClient = jdbcClient;
     }
 
